@@ -30,4 +30,5 @@ def predict_step(image_paths):
   preds=tokenizer.batch_decode(output_ids, skip_special_tokens=True)
   preds=[pred.strip() for pred in preds]
   return preds
-predict_step(["/content/image1.jpg"])
+caption=predict_step(["/content/image1.jpg"])
+print(caption)
